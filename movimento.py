@@ -1,3 +1,5 @@
+#PRECISA INSTALAR O MÓDULO readchar com o comando: pip3 install readchar
+
 import hiwonder.ActionGroupControl as AGC
 import time
 import readchar
@@ -6,8 +8,8 @@ texto = '''
 Use as teclas
     w: Frente
     s: Tras
-    a: Virar a esquerda
-    d: Virar a direita
+    a: Lateral a esquerda
+    d: Lateral a direita
     ctrl+c: Sair
 '''
 
@@ -19,6 +21,8 @@ try:
        
         
         titulo()
+	AGC.runActionGroup('stand')
+
         while True:
             key = readchar.readkey()
             key = key.lower()
@@ -27,13 +31,13 @@ try:
                     AGC.runActionGroup('passofrente')
 
                 elif 's' == key:
-                   AGC.runActionGroup('passotras')
+                   AGC.runActionGroup('tras')
 
                 elif 'a' == key:
-                   AGC.runActionGroup('curvaesquerda')
+                   AGC.runActionGroup('lateralesquerda')
 
                 elif 'd' == key:
-                   AGC.runActionGroup('curvadireita')
+                   AGC.runActionGroup('lateraldireita')
 
                  
                  
