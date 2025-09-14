@@ -97,27 +97,27 @@ if __name__ == "__main__":
     while True:
         recognition_result = asr_module.rec_recognition()
         if recognition_result[0] != 0:
-   	if recognition_result[0] == 1:
-           	print("anda sete passos a frente")
-                AGC.runActionGroup('passofrente')
-                AGC.runActionGroup('passofrente')
-                AGC.runActionGroup('passofrente')
-                AGC.runActionGroup('passofrente')
-                AGC.runActionGroup('passofrente')
-                AGC.runActionGroup('passofrente')
-                AGC.runActionGroup('passofrente')
-	elif recognition_result[0] == 2:
-                print("anda sete passos atras")
+   		if recognition_result[0] == 1:
+    		print("anda sete passos a frente")
+            AGC.runActionGroup('passofrente')
+            AGC.runActionGroup('passofrente')
+            AGC.runActionGroup('passofrente')
+            AGC.runActionGroup('passofrente')
+            AGC.runActionGroup('passofrente')
+            AGC.runActionGroup('passofrente')
+            AGC.runActionGroup('passofrente')
+		elif recognition_result[0] == 2:
+            print("anda sete passos atras")
         	AGC.runActionGroup('tras')
-		AGC.runActionGroup('tras')
-                AGC.runActionGroup('tras')
-                AGC.runActionGroup('tras')
-                AGC.runActionGroup('tras')
-                AGC.runActionGroup('tras')
-                AGC.runActionGroup('tras')
+			AGC.runActionGroup('tras')
+            AGC.runActionGroup('tras')
+            AGC.runActionGroup('tras')
+            AGC.runActionGroup('tras')
+            AGC.runActionGroup('tras')
+            AGC.runActionGroup('tras')
       	elif recognition_result[0] == 3:
           	print("nao implementado")
      	elif recognition_result[0] == 4:
-                print("nao implementado")
+            print("nao implementado")
      	elif recognition_result[0] == 9:
-                print("stop")
+			print("stop")
